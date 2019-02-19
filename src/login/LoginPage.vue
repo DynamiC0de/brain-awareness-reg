@@ -3,14 +3,14 @@
         <h2>Belépés</h2>
         <form @submit.prevent="handleSubmit">
             <div class="form-group">
-                <label for="username">Felhasználónév</label>
-                <input type="text" v-model="username" name="username" class="form-control" :class="{ 'is-invalid': submitted && !username }" />
-                <div v-show="submitted && !username" class="invalid-feedback">Felhasználónév szükséges</div>
+                <label for="email">Felhasználónév</label>
+                <input type="text" v-model="email" name="email" class="form-control" :class="{ 'is-invalid': submitted && !email }" />
+                <div v-show="submitted && !email" class="invalid-feedback">Felhasználónév szükséges</div>
             </div>
             <div class="form-group">
-                <label htmlFor="password">Jelszó</label>
-                <input type="password" v-model="password" name="password" class="form-control" :class="{ 'is-invalid': submitted && !password }" />
-                <div v-show="submitted && !password" class="invalid-feedback">Jelszó szükséges</div>
+                <label htmlFor="age">Jelszó</label>
+                <input type="age" v-model="age" name="age" class="form-control" :class="{ 'is-invalid': submitted && !age }" />
+                <div v-show="submitted && !age" class="invalid-feedback">Jelszó szükséges</div>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary" :disabled="status.loggingIn">Belépés</button>
@@ -27,8 +27,8 @@ import { mapState, mapActions } from 'vuex'
 export default {
     data () {
         return {
-            username: '',
-            password: '',
+            email: '',
+            age: '',
             submitted: false
         }
     },
@@ -43,9 +43,9 @@ export default {
         ...mapActions('account', ['login', 'logout']),
         handleSubmit (e) {
             this.submitted = true;
-            const { username, password } = this;
-            if (username && password) {
-                this.login({ username, password })
+            const { email, age } = this;
+            if (email && age) {
+                this.login({ email, age })
             }
         }
     }
