@@ -1,0 +1,25 @@
+.navbar {
+  background-color: #001b48;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.logo {
+  float: none;
+  vertical-align: middle;
+}
+
+.container {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.bar-2 .username {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
