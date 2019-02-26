@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <label htmlFor="age">Életkor</label>
-                <input type="number" v-model="user.age" v-validate="'required'" name="age" class="form-control" :class="{ 'is-invalid': submitted && errors.has('age') }" />
+                <input type="number" v-model="user.age" v-validate="'between:1,99'" name="age" class="form-control" :class="{ 'is-invalid': submitted && errors.has('age') }" />
                 <div v-if="submitted && errors.has('age')" class="invalid-feedback">{{ errors.first('age') }}</div>
             </div>
             <div class="form-group">
