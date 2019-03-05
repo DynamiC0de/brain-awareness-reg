@@ -24,7 +24,10 @@ module.exports = {
         template: './src/index.html'
     })],
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        allowedHosts: [
+          'brain-awareness-reg.herokuapp.com'
+        ]
     },
     externals: {
         // global app config object
